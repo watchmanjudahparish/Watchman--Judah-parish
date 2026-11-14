@@ -111,5 +111,208 @@
       display: flex;
       justify-content: center;
       gap: 12px;
+      flex-wrap: wrap;
+    }
 
-      
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #071326;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--navy-border);
+      background: var(--navy-card);
+      color: var(--text-main);
+    }
+
+    /* Sections */
+    section {
+      padding: 52px 0;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--gold-soft);
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      margin-bottom: 26px;
+      font-size: 0.96rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .highlight {
+      color: var(--gold-soft);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--navy-border);
+      padding: 32px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: #050e1d;
+    }
+
+    footer p + p {
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">Watchman Judah Parish</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Service Times</a>
+        <a href="#connect">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Welcome to Watchman Judah Parish</span>
+        <h1>A Place of Worship, Word, and Fellowship</h1>
+        <p>
+          We are glad to have you visit our parish home online. Join us as we gather in prayer,
+          grow in faith, and stand together as one family in Christ.
+        </p>
+        <div class="btn-group">
+          <a href="#services" class="btn btn-primary">View Service Times</a>
+          <a href="https://wa.me/2348034517591" target="_blank" rel="noopener" class="btn btn-secondary">
+            Message on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Our Parish</h2>
+        <p class="section-sub">Rooted in scripture, prayer, and community care.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Our Mission</h3>
+            <p>
+              To raise believers grounded in the Word of God, committed to prayer, holiness, and
+              loving service to our community.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Our Welcome</h3>
+            <p>
+              Whether you are visiting for the first time or looking for a church family to call
+              home, you are warmly welcomed at Watchman Judah Parish.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Parish Location</h3>
+            <p>
+              <span class="highlight">Address:</span> Add your parish street address and landmark here
+              (e.g., Abuja, Nigeria).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Weekly Service Schedule</h2>
+        <p class="section-sub">Update the times below to match your parish calendar.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Sunday Worship Service</h3>
+            <p><span class="highlight">Time:</span> 8:00 AM – 10:30 AM</p>
+            <p>Praise, worship, Word ministration, and fellowship.</p>
+          </div>
+          <div class="card">
+            <h3>Midweek Bible Study</h3>
+            <p><span class="highlight">Time:</span> Wednesdays, 5:30 PM – 7:00 PM</p>
+            <p>In-depth teaching and spiritual growth.</p>
+          </div>
+          <div class="card">
+            <h3>Prayer &amp; Revival</h3>
+            <p><span class="highlight">Time:</span> Fridays, 5:30 PM – 7:00 PM</p>
+            <p>Corporate intercession and spiritual renewal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect">
+      <div class="container">
+        <h2 class="section-title">Prayer Requests &amp; Contact</h2>
+        <p class="section-sub">Reach out for prayer, counseling, or parish inquiries.</p>
+        <div class="card">
+          <h3>Get in Touch</h3>
+          <p>
+            <span class="highlight">WhatsApp / Phone:</span>
+            <a href="https://wa.me/2348034517591" class="highlight">08034517591</a>
+          </p>
+          <p style="margin-top: 8px;">
+            Tap the WhatsApp button at the top or number above to send a prayer request or ask
+            about directions to the parish.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Watchman Judah Parish</strong></p>
+      <p>&copy; <span id="year"></span> Watchman Judah Parish. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
