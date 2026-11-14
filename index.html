@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchman Judah Parish | Welcome</title>
+  <style>
+    :root {
+      --navy-dark: #071326;
+      --navy-card: #0f2242;
+      --navy-border: #1e3a68;
+      --gold: #f0b429;
+      --gold-soft: #fbd34d;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--navy-dark);
+      color: var(--text-main);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Header / Nav */
+    header {
+      background: rgba(7, 19, 38, 0.95);
+      border-bottom: 1px solid var(--navy-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover {
+      color: var(--gold-soft);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 64px 0 52px;
+      text-align: center;
+      background: radial-gradient(circle at top, #132d57 0%, var(--navy-dark) 72%);
+      border-bottom: 1px solid var(--navy-border);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(240, 180, 41, 0.14);
+      color: var(--gold-soft);
+      border: 1px solid rgba(240, 180, 41, 0.4);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+
+      
