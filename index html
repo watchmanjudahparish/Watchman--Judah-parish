@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchman Catholic Charismatic Renewal Movement</title>
+  <style>
+    :root {
+      --navy-dark: #071326;
+      --navy-mid: #0d2142;
+      --navy-light: #163363;
+      --gold: #f5b82e;
+      --gold-soft: #ffe08a;
+      --sky-blue: #1e90ff;
+      --bg-light: #f3f6fb;
+      --card-bg: #ffffff;
+      --text-main: #102038;
+      --text-muted: #526480;
+      --border-light: #dce4f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* ================= HEADER & MORPHING LOGO ================= */
+    header {
+      background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+      color: #ffffff;
+      padding: 1.5rem 1rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+      border-bottom: 2px solid rgba(245, 184, 46, 0.35);
+    }
+
+    .brand-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Box Logo that turns around randomly and changes shapes */
+    .logo-morph-box {
+      width: 96px;
+      height: 96px;
+      background: #ffffff;
+      padding: 6px;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 22px rgba(30, 144, 255, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: morphAndTurn 10s ease-in-out infinite;
+    }
+
+    .logo-morph-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    @keyframes morphAndTurn {
+      0% {
+        border-radius: 14px;
+        transform: rotate(0deg) scale(1);
+        border-color: var(--gold);
+      }
+      20% {
+        border-radius: 32px 8px 32px 8px;
+        transform: rotate(14deg) scale(1.04);
+        border-color: #38bdf8;
+      }
+      40% {
+        border-radius: 8px 36px 12px 36px;
+        transform: rotate(-18deg) scale(0.98);
+        border-color: var(--gold);
+      }
+      60% {
+        border-radius: 26px 26px 6px 6px;
+        transform: rotate(360deg) scale(1.03);
+        border-color: #38bdf8;
+      }
+      80% {
+        border-radius: 6px 28px 6px 28px;
+        transform: rotate(348deg) scale(1);
+        border-color: var(--gold);
+      }
+      100% {
+        border-radius: 14px;
+        transform: rotate(360deg) scale(1);
+        border-color: var(--gold);
+      }
+    }
+
+    .brand-titles h1 {
+      font-size: clamp(1.1rem, 3.8vw, 1.65rem);
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .scripture-tag {
+      display: inline-block;
+      margin-top: 0.3rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+
+    /* Clean Responsive Navigation */
+    nav {
+      margin-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 0.75rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+    }
+
+    .nav-links a {
+      color: #e2ecff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--navy-dark);
+      background-color: var(--gold);
+    }
+
+    /* ================= VISION HERO SECTION ================= */
+    .vision-banner {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
+      color: #ffffff;
+      padding: 2.25rem 1.25rem;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .vision-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .vision-badge {
+      display: inline-block;
+      background: rgba(245, 184, 46, 0.18);
+      color: var(--gold-soft);
+      border: 1px solid rgba(245, 184, 46, 0.45);
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .vision-inner blockquote {
+      font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.45;
+      color: #ffffff;
+    }
+
+    .vision-inner blockquote span {
+      color: var(--gold);
+    }
+
+    /* ================= MAIN CONTAINER & SECTIONS ================= */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3.5rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 195px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.65rem;
+      color: var(--navy-dark);
+      font-weight: 800;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-top: 0.25rem;
+    }
+
+    .search-bar-wrap {
+      max-width: 520px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.8rem 1.1rem;
+      border: 2px solid var(--border-light);
+      border-radius: 10px;
+      font-size: 0.98rem;
+      background: #ffffff;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--navy-light);
+    }
+
+    /* ================= ALPHABETICAL GALLERY GRID ================= */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .gallery-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(10, 25, 47, 0.14);
+    }
+
+    .gallery-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #e5ecf6;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      padding: 0.9rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      background: #ffffff;
+    }
+
+    .gallery-caption h3 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      text-transform: capitalize;
+    }
+
+    .alpha-badge {
+      background: var(--navy-mid);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ================= GPS LOCATOR & DIOCESE DIRECTORY ================= */
+    .gps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.15rem;
+    }
+
+    .diocese-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.2rem;
+      border: 1px solid var(--border-light);
+      border-left: 5px solid var(--navy-mid);
+      box-shadow: 0 3px 10px rgba(10, 25, 47, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.85rem;
+    }
+
+    .diocese-card h3 {
+      color: var(--navy-dark);
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .diocese-address {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      margin-bottom: 0.45rem;
+    }
+
+    .diocese-contact {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .diocese-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.3rem;
+    }
+
+    .btn-map,
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0.85rem;
+      border-radius: 7px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-map {
+      background: var(--navy-mid);
+      color: #ffffff;
+    }
+
+    .btn-call {
+      background: #e8f0fe;
+      color: var(--navy-mid);
+      border: 1px solid #c5d8fa;
+    }
+
+    .btn-map:hover,
+    .btn-call:hover {
+      opacity: 0.88;
+    }
+
+    /* ================= ASK A QUESTION & CONTACTS ================= */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .panel-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 14px rgba(10, 25, 47, 0.06);
+    }
+
+    .panel-box h3 {
+      font-size: 1.25rem;
+      color: var(--navy-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--navy-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.72rem 0.9rem;
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 0.85rem;
+      background: var(--navy-dark);
+      color: var(--gold);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background: var(--navy-light);
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .contact-list li {
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.94rem;
+    }
+
+    /* ================= LIGHTBOX MODAL ================= */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 12, 24, 0.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    .lightbox-content img {
+      max-height: 78vh;
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid var(--gold);
+    }
+
+    .lightbox-title {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-top: 0.75rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      background: var(--gold);
+      color: var(--navy-dark);
+      border: none;
+      border-radius: 6px;
+      padding: 0.35rem 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: var(--navy-dark);
+      color: #ffffff;
+      text-align: center;
+      padding: 2.25rem 1rem;
+      border-top: 4px solid var(--gold);
+    }
+
+    .footer-remark {
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-sub {
+      font-size: 0.88rem;
+      color: #b8c7e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="brand-top">
+      <!-- Morphing & Rotating Box Logo -->
+      <div class="logo-morph-box" title="Watchman Catholic Charismatic Renewal Movement">
+        <img src="logo.jpg" alt="WCCRM Logo" onerror="this.src='186860.jpg'" />
+      </div>
+
+      <div class="brand-titles">
+        <h1>WATCHMAN CATHOLIC CHARISMATIC RENEWAL MOVEMENT</h1>
+        <span class="scripture-tag">Ezek. 33:1-7 &bull; Isa. 62:6-7</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#gallery" class="active">Ministry Gallery</a></li>
+        <li><a href="#gps-locator">GPS Locator</a></li>
+        <li><a href="#ask-question">Ask a Question</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= VISION STATEMENT ================= -->
+  <div class="vision-banner">
+    <div class="vision-inner">
+      <div class="vision-badge">Our Divine Mandate &amp; Vision</div>
+      <blockquote>
+        &ldquo;A place where God has placed <span>His Name</span>, <span>His Word</span>, <span>His Spirit</span>, and <span>His Power</span> in these last days.&rdquo;
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- 1. ALPHABETICAL MINISTRY GALLERY -->
+    <section id="gallery">
+      <div class="section-header">
+        <h2>Ministry Gallery (A &ndash; Z)</h2>
+        <p>Arranged strictly in alphabetical order across our dioceses, churches, choirs, and ministers.</p>
+      </div>
+
+      <div class="search-bar-wrap">
+        <input
+          type="text"
+          id="gallerySearch"
+          class="search-input"
+          placeholder="Search gallery by diocese, church, pastor, or choir..."
+          onkeyup="filterGallery()"
+        />
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- 2. GPS LOCATOR & DIOCESAN DIRECTORY -->
+    <section id="gps-locator">
+      <div class="section-header">
+        <h2>GPS Locator &amp; Diocesan Centres</h2>
+        <p>Find a Watchman Catholic Charismatic Renewal Movement worship centre near you.</p>
+      </div>
+
+      <div class="search-bar-wrap">
+        <input
+          type="text"
+          id="gpsSearch"
+          class="search-input"
+          placeholder="Search by state, city, or street (e.g., Abuja, Lagos, Owerri, Jos)..."
+          onkeyup="filterGPS()"
+        />
+      </div>
+
+      <div class="gps-grid" id="gpsGrid"></div>
+    </section>
+
+    <!-- 3. ASK A QUESTION & CONTACTS -->
+    <section id="ask-question">
+      <div class="two-col-grid">
+        <div class="panel-box">
+          <h3>Ask a Question / Prayer Request</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1rem;">
+            Have a question about the Watchman ministry, doctrines, or need spiritual counseling? Send a message directly.
+          </p>
+          <form onsubmit="submitQuestion(event)">
+            <div class="form-group">
+              <label for="qName">Your Full Name</label>
+              <input type="text" id="qName" required placeholder="Enter your name" />
+            </div>
+            <div class="form-group">
+              <label for="qLocation">City / State</label>
+              <input type="text" id="qLocation" required placeholder="e.g., Abuja, Lagos, Port Harcourt" />
+            </div>
+            <div class="form-group">
+              <label for="qMessage">Your Question or Prayer Request</label>
+              <textarea id="qMessage" rows="4" required placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send via WhatsApp</button>
+          </form>
+        </div>
+
+        <div class="panel-box" id="contacts">
+          <h3>Key Diocesan &amp; National Contacts</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">
+            Reach out to our regional headquarters and pastoral desks across Nigeria:
+          </p>
+          <ul class="contact-list">
+            <li>
+              <strong>Abuja Diocese (FCT):</strong><br />
+              WCCRM, Plot 319, Daki-Biu District, FCT, Abuja.<br />
+              <em>Contact: Pst. Nweze Onyeka John &mdash; 08037038110</em>
+            </li>
+            <li>
+              <strong>Lagos Diocese:</strong><br />
+              No. 27, Adebola Ojomu Street, Aguda, Surulere, Lagos.<br />
+              <em>Contacts: Pst. Chikezie (08038226415) &bull; Pascal (08155774494, 08135504742)</em>
+            </li>
+            <li>
+              <strong>Owerri Diocese:</strong><br />
+              Plot C25, Watchman Relief Market Road, Ikenegbu Layout Extension, Owerri, Imo State.<br />
+              <em>Contacts: Pst. Sam (08037478303) &bull; Pst. Joe (08033965256)</em>
+            </li>
+            <li>
+              <strong>Port Harcourt Diocese:</strong><br />
+              16B, Elechi Beach, Mile 1, Diobu, Port Harcourt.<br />
+              <em>Contact: Pst. Williams Ohaleme &mdash; 08037847305</em>
+            </li>
+            <li>
+              <strong>Kaduna Diocese:</strong><br />
+              26, Cemetery Road, Sabon Gari, Zaria, Kaduna State.<br />
+              <em>Contacts: Pst. Olowo Samuel &mdash; 080370121021, 08176194444</em>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="forceCloseLightbox()">Close &times;</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-title" id="lightboxTitle"></div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p class="footer-remark">&ldquo;Come along with us and God will do thee good.&rdquo;</p>
+    <p class="footer-sub">Watchman Catholic Charismatic Renewal Movement &bull; Ezek. 33:1-7; Isa. 62:6-7</p>
+  </footer>
+
+  <!-- ================= JAVASCRIPT DATA & SORTING ================= -->
+  <script>
+    // Exact filenames from your GitHub repository
+    const galleryFiles = [
+      { file: "aba choir.jpg", title: "Aba Choir" },
+      { file: "aba church.jpg", title: "Aba Church" },
+      { file: "aba diocese.jpg", title: "Aba Diocese" },
+      { file: "abakiliki church.jpg", title: "Abakaliki Church" },
+      { file: "abakiliki diocese.jpg", title: "Abakaliki Diocese" },
+      { file: "abuja choir.jpg", title: "Abuja Choir" },
+      { file: "abuja diocese.jpg", title: "Abuja Diocese" },
+      { file: "ahiara church.jpg", title: "Ahiara Church" },
+      { file: "ahiara diocese.jpg", title: "Ahiara Diocese" },
+      { file: "akure district.jpg", title: "Akure District" },
+      { file: "akwa church.jpg", title: "Awka Church" },
+      { file: "akwa diocese.jpg", title: "Awka Diocese" },
+      { file: "benin diocese.jpg", title: "Benin Diocese" },
+      { file: "calabar choir.jpg", title: "Calabar Choir" },
+      { file: "calabar diocese.jpg", title: "Calabar Diocese" },
+      { file: "Enough Diocese.jpg", title: "Enugu Diocese" },
+      { file: "Enugu church.jpg", title: "Enugu Church" },
+      { file: "ibadan church.jpg", title: "Ibadan Church" },
+      { file: "ibadan diocese.jpg", title: "Ibadan Diocese" },
+      { file: "ilorin church.jpg", title: "Ilorin Church" },
+      { file: "ilorin.jpg", title: "Ilorin" },
+      { file: "issele-uku diocese.jpg", title: "Issele-Uku Diocese" },
+      { file: "jos diocese.jpg", title: "Jos Diocese" },
+      { file: "kaduna diocese.jpg", title: "Kaduna Diocese" },
+      { file: "lagos diocesan pastor.jpg", title: "Lagos Diocesan Pastor" },
+      { file: "lokoja church.jpg", title: "Lokoja Church" },
+      { file: "lokoja diocese.jpg", title: "Lokoja Diocese" },
+      { file: "makurdi church.jpg", title: "Makurdi Church" },
+      { file: "makurdi diocese.jpg", title: "Makurdi Diocese" },
+      { file: "minna church.jpg", title: "Minna Church" },
+      { file: "minna diocese.jpg", title: "Minna Diocese" },
+      { file: "mummy gideon.jpg", title: "Mummy Gideon" },
+      { file: "nsukka diocese.jpg", title: "Nsukka Diocese" },
+      { file: "ogoja church.jpg", title: "Ogoja Church" },
+      { file: "ogoja diocese.jpg", title: "Ogoja Diocese" },
+      { file: "okigwe church.jpg", title: "Okigwe Church" },
+      { file: "okigwe diocese.jpg", title: "Okigwe Diocese" },
+      { file: "okigwe.jpg", title: "Okigwe" },
+      { file: "orlu church.jpg", title: "Orlu Church" },
+      { file: "orlu diocese.jpg", title: "Orlu Diocese" },
+      { file: "owerri church.jpg", title: "Owerri Church" },
+      { file: "owerri diocese.jpg", title: "Owerri Diocese" },
+      { file: "pastor amos jos.jpg", title: "Pastor Amos (Jos)" },
+      { file: "pastor gideon udeh.jpg", title: "Pastor Gideon Udeh" },
+      { file: "pastor gideon.jpg", title: "Pastor Gideon" },
+      { file: "pastor olowo kaduna diocese.jpg", title: "Pastor Olowo (Kaduna Diocese)" },
+      { file: "pastor protase.jpg", title: "Pastor Protase" },
+      { file: "port harcourt church.jpg", title: "Port Harcourt Church" },
+      { file: "port harcourt.jpg", title: "Port Harcourt" },
+      { file: "pst arinze benin.jpg", title: "Pst. Arinze (Benin)" },
+      { file: "pst chike port harcourt.jpg", title: "Pst. Chike (Port Harcourt)" },
+      { file: "pst dominic akure.jpg", title: "Pst. Dominic (Akure)" },
+      { file: "uyo church.jpg", title: "Uyo Church" },
+      { file: "uyo diocese.jpg", title: "Uyo Diocese" },
+      { file: "uyo.jpg", title: "Uyo" },
+      { file: "youth choir.jpg", title: "Youth Choir" }
+    ];
+
+    // Enforce strict A-Z alphabetical sorting by title
+    galleryFiles.sort((a, b) => a.title.localeCompare(b.title));
+
+    function renderGallery(items) {
+      const grid = document.getElementById("galleryGrid");
+      grid.innerHTML = items.map(item => {
+        const firstLetter = item.title.charAt(0).toUpperCase();
+        const encodedSrc = encodeURI(item.file);
+        return `
+          <div class="gallery-card" onclick="openLightbox('${encodedSrc}', '${item.title.replace(/'/g, "\\'")}')">
+            <div class="gallery-img-wrap">
+              <img src="${encodedSrc}" alt="${item.title}" loading="lazy" />
+            </div>
+            <div class="gallery-caption">
+              <h3>${item.title}</h3>
+              <span class="alpha-badge">${firstLetter}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function filterGallery() {
+      const query = document.getElementById("gallerySearch").value.toLowerCase().trim();
+      const filtered = galleryFiles.filter(item =>
+        item.title.toLowerCase().includes(query) || item.file.toLowerCase().includes(query)
+      );
+      renderGallery(filtered);
+    }
+
+    // Diocesan Locations & Contacts from Directory
+    const dioceses = [
+      {
+        name: "ABA",
+        address: "East by Park Road Junction, River Layout, Aba, Abia State.",
+        contact: "Pst. Andrew Onuoha — 08037237954",
+        phone: "08037237954"
+      },
+      {
+        name: "ABAKALIKI",
+        address: "7/13, Watchman Street, New Layout, Abakaliki, Ebonyi State.",
+        contact: "Pst. Obinwa (08033075842); Pst. Obinna Ogbuzuru (08065146605)",
+        phone: "08033075842"
+      },
+      {
+        name: "ABUJA (FCT)",
+        address: "WCCRM, Plot 319, Daki-Biu District, FCT, Abuja.",
+        contact: "Pst. Nweze Onyeka John — 08037038110",
+        phone: "08037038110"
+      },
+      {
+        name: "AHIARA",
+        address: "Amawa Oru-Ahiara, Ahiazu, Mbaise, Imo State.",
+        contact: "Pst. Bede (08035800626); Pst. Chinedum (07039493485)",
+        phone: "08035800626"
+      },
+      {
+        name: "AWKA",
+        address: "New Era Compound, Ukwu Oji, Behind UBA, Awka, Anambra State.",
+        contact: "Sis. Rose — 08067743983",
+        phone: "08067743983"
+      },
+      {
+        name: "BENIN",
+        address: "11/13, Igbinedion Street, Off Country Home Road, Off Sapele Road, Benin City.",
+        contact: "Pst. Linus Arinze — 08033449946",
+        phone: "08033449946"
+      },
+      {
+        name: "CALABAR",
+        address: "108, Nelson Mandela Street, By Atu Street, Calabar.",
+        contact: "Pst. Otogo — 08036554789",
+        phone: "08036554789"
+      },
+      {
+        name: "ENUGU",
+        address: "3, Emeka Ebila Street, Idaw River Layout, Enugu.",
+        contact: "Pst. Ubachukwu Nicholas — 08033664265",
+        phone: "08033664265"
+      },
+      {
+        name: "IBADAN",
+        address: "Former N.T.C. Playground, N.T.C. Road, Oke-Bola, Ibadan.",
+        contact: "Pst. Fortune Uzuegbu (07031002009); Pst. Charles Orji (08132241100)",
+        phone: "07031002009"
+      },
+      {
+        name: "ILORIN",
+        address: "No. 16, Agba Dam Road, Near CBN Staff Quarters, Gaa Akanbi, Ilorin, Kwara State.",
+        contact: "Pst. Joshua — 08033748343",
+        phone: "08033748343"
+      },
+      {
+        name: "ISSELE-UKU",
+        address: "Plot 2, Stadium Road, Behind Asaba Township Stadium, Delta State.",
+        contact: "Pst. Cornelius Akushie — 08033161614",
+        phone: "08033161614"
+      },
+      {
+        name: "JOS",
+        address: "Behind St. Mulumba's College, Busa Buji Road, Jos, Plateau State.",
+        contact: "Rosemary Iduta — 08036906260",
+        phone: "08036906260"
+      },
+      {
+        name: "KADUNA",
+        address: "26, Cemetery Road, Sabon Gari, Zaria, Kaduna State.",
+        contact: "Pst. Olowo Samuel — 080370121021, 08176194444",
+        phone: "08176194444"
+      },
+      {
+        name: "LAGOS",
+        address: "No. 27, Adebola Ojomu Street, Aguda, Surulere, Lagos.",
+        contact: "Pst. Chikezie (08038226415); Pascal (08155774494, 08135504742)",
+        phone: "08038226415"
+      },
+      {
+        name: "LOGISS (Awo-Ommama)",
+        address: "LOGOS International Secondary School, Km. 24 Onitsha-Owerri Road, Awo-Ommama, Imo State.",
+        contact: "Pst. Precious — 08033546004",
+        phone: "08033546004"
+      },
+      {
+        name: "LOKOJA",
+        address: "Behind Kafas Multi-purpose Hall, Opposite Phase 2, Lokoja, Kogi State.",
+        contact: "Eze Ekene (08037889269); Emma Onwukwe (08039119520)",
+        phone: "08037889269"
+      },
+      {
+        name: "MAKURDI",
+        address: "Behind NOUN, Along St. Augustine Rd, Otukpo / Makurdi, Benue State.",
+        contact: "Pst. David Oche — 08061295541",
+        phone: "08061295541"
+      },
+      {
+        name: "MINNA",
+        address: "Beside PZ PLC, Agwankaje, Minna, Niger State.",
+        contact: "Pst. Mgbechi Godian — 080535877459",
+        phone: "080535877459"
+      },
+      {
+        name: "NSUKKA",
+        address: "58, Aku Road, Off Enugu Road, Nsukka, Enugu State.",
+        contact: "Pst. C. Abba — 07038599210, 08127012797",
+        phone: "07038599210"
+      },
+      {
+        name: "OGOJA",
+        address: "Behind St. Catherine College, Agiga Igoli, Ogoja, Cross River State.",
+        contact: "Pst. Philip — 08062732735",
+        phone: "08062732735"
+      },
+      {
+        name: "OKIGWE",
+        address: "79, Umuchima Road, Okigwe, Imo State.",
+        contact: "Pst. Raymond John (08037988250); Uche Eluagu (08066586150)",
+        phone: "08037988250"
+      },
+      {
+        name: "ONITSHA",
+        address: "9/10, Sylva Adibe Crescent, Fitzel Estate, Awada, Onitsha, Anambra State.",
+        contact: "Paulinus Awuzie — 08130960175",
+        phone: "08130960175"
+      },
+      {
+        name: "ORLU",
+        address: "21B, Igwe Igboanusi Street, Umuna Orlu, Imo State.",
+        contact: "Pst. Peter Ikegbu — 08034199597",
+        phone: "08034199597"
+      },
+      {
+        name: "OWERRI",
+        address: "Plot C25, Watchman Relief Market Road, Ikenegbu Layout Extension, Owerri, Imo State.",
+        contact: "Pst. Sam (08037478303); Pst. Joe (08033965256)",
+        phone: "08037478303"
+      },
+      {
+        name: "PORT HARCOURT",
+        address: "16B, Elechi Beach, Mile 1, Diobu, Port Harcourt, Rivers State.",
+        contact: "Pst. Williams Ohaleme — 08037847305",
+        phone: "08037847305"
+      },
+      {
+        name: "UMUAHIA",
+        address: "81/88 Uzor Eghem Layout, Off Secretariat Road, Near BCA, Umuahia, Abia State.",
+        contact: "Pst. Chimezie Ajuonuma — 08063822976",
+        phone: "08063822976"
+      },
+      {
+        name: "UYO",
+        address: "3, Ibesikpo Street, Off Abak Road, Uyo, Akwa Ibom State.",
+        contact: "Watchman Diocesan Office, Uyo",
+        phone: ""
+      }
+    ];
+
+    dioceses.sort((a, b) => a.name.localeCompare(b.name));
+
+    function renderGPS(items) {
+      const grid = document.getElementById("gpsGrid");
+      grid.innerHTML = items.map(d => {
+        const mapsQuery = encodeURIComponent("Watchman Catholic Charismatic Renewal Movement " + d.address);
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+        const callBtn = d.phone
+          ? `<a href="tel:${d.phone}" class="btn-call">Call Desk</a>`
+          : "";
+        return `
+          <div class="diocese-card">
+            <div>
+              <h3>${d.name} DIOCESE</h3>
+              <p class="diocese-address">${d.address}</p>
+              <p class="diocese-contact">${d.contact}</p>
+            </div>
+            <div class="diocese-actions">
+              <a href="${mapsUrl}" target="_blank" rel="noopener" class="btn-map">Open GPS Map</a>
+              ${callBtn}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function filterGPS() {
+      const query = document.getElementById("gpsSearch").value.toLowerCase().trim();
+      const filtered = dioceses.filter(d =>
+        d.name.toLowerCase().includes(query) ||
+        d.address.toLowerCase().includes(query) ||
+        d.contact.toLowerCase().includes(query)
+      );
+      renderGPS(filtered);
+    }
+
+    // Lightbox Functions
+    function openLightbox(src, title) {
+      document.getElementById("lightboxImg").src = src;
+      document.getElementById("lightboxTitle").textContent = title;
+      document.getElementById("lightbox").classList.add("open");
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === "lightbox") {
+        forceCloseLightbox();
+      }
+    }
+
+    function forceCloseLightbox() {
+      document.getElementById("lightbox").classList.remove("open");
+    }
+
+    // Ask a Question -> Opens WhatsApp with pre-filled inquiry
+    function submitQuestion(e) {
+      e.preventDefault();
+      const name = document.getElementById("qName").value.trim();
+      const loc = document.getElementById("qLocation").value.trim();
+      const msg = document.getElementById("qMessage").value.trim();
+      const text = encodeURIComponent(
+        `Shalom Watchman Ministry,\nName: ${name}\nLocation: ${loc}\nInquiry/Prayer Request: ${msg}`
+      );
+      window.open(`https://wa.me/2349162614045?text=${text}`, "_blank");
+    }
+
+    // Initial Render
+    renderGallery(galleryFiles);
+    renderGPS(dioceses);
+  </script>
+
+</body>
+</html>
